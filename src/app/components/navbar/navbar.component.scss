@@ -1,0 +1,55 @@
+.navbar-container {
+    width: fit-content;
+    height: auto;
+
+    left: 0;
+    right: 0;
+    top: 0rem;
+
+    z-index: 999;
+
+    position: fixed;
+    align-self: center;
+    margin-inline: auto;
+
+    .pages {
+        width: fit-content;
+        height: fit-content;
+
+        gap: var(--gap-05);
+        border-radius: 5rem;
+        padding: var(--gap-05);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        list-style: none;
+        user-select: none;
+
+        background-color:  rgb(var(--B01), 0.45);
+        border: 1px solid rgb(var(--B01));
+        backdrop-filter: blur(10px);
+
+        .page {
+            cursor: pointer;
+            border-radius: 5rem;
+            padding: var(--gap-05) var(--gap-10);
+            transition: var(--standart-transition);
+
+            &.active {
+                color: var(--white);
+                background-color: rgb(var(--B03), 0.4);
+
+                &:hover {
+                    background-color: rgb(var(--B03), 0.5);
+                }
+            }
+
+            &:hover {
+                background-color: rgb(var(--B03), 0.2);
+            }
+        }
+    }
+}
