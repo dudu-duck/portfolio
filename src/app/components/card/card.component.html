@@ -1,0 +1,23 @@
+<div class="card-container">
+    <div class="image-container">
+        <img [src]="imgSrc" alt="">
+    </div>
+    <div class="info">
+        <h2 class="header">
+            {{header}}
+        </h2>
+        <div class="date">
+            {{date}}
+        </div>
+        <p class="description">
+            <ng-content>
+                
+            </ng-content>
+        </p>
+        <ul class="skills">
+            <li class="skill" *ngFor="let skill of skills">
+                {{skill}}
+            </li>
+        </ul>
+    </div>
+</div>
