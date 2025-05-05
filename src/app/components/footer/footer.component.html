@@ -1,0 +1,27 @@
+<div class="footer-overlay">
+
+    <div class="footer-container">
+        <ul class="sections-container" *ngFor="let section of sections">
+
+            <div class="section">
+
+                <div class="section-title">{{ section.title | uppercase }}</div>
+
+                <li class="item" *ngFor="let item of section.items">
+                    @if (isApplicationRoute(item.url)) {
+
+                    <a class="link" [routerLink]="item.url">{{ item.title }}</a>
+
+                    } @else {
+
+                    <a class="link" target="_blank" rel="nofollow" [href]="item.url">{{
+                        item.title }}</a>
+
+                    }
+                </li>
+
+            </div>
+        </ul>
+    </div>
+
+</div>

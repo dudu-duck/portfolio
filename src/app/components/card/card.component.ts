@@ -19,7 +19,11 @@ export class CardComponent {
     protected imgSrc: string = '';
 
     constructor() {
-        this.imgSrc = this.job == 'matera' ? '../../../assets/images/matera.png' : '';
+    }
+
+    ngOnInit(): void {
+        this.imgSrc = this.job == 'matera' ? '../../../assets/images/matera.png' : '../../../assets/images/infotreasury.png';
+
     }
 
 }

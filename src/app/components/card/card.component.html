@@ -3,19 +3,25 @@
         <img [src]="imgSrc" alt="">
     </div>
     <div class="info">
-        <h2 class="header">
-            {{header}}
-        </h2>
-        <div class="date">
-            {{date}}
+        <div class="header-container">
+
+            <h2 class="header">
+                {{header}}
+            </h2>
+
+            <div class="date">
+                {{date}}
+            </div>
         </div>
-        <p class="description">
+
+        <div class="description">
             <ng-content>
-                
+
             </ng-content>
-        </p>
+        </div>
+
         <ul class="skills">
-            <li class="skill" *ngFor="let skill of skills">
+            <li class="skill badge" *ngFor="let skill of skills">
                 {{skill}}
             </li>
         </ul>

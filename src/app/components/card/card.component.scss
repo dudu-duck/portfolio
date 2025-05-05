@@ -11,7 +11,9 @@
     justify-self: center;
     align-items: flex-start;
 
+    border: 1px solid rgb(var(--R03), 0.5);
     background: var(--card-bg);
+    backdrop-filter: blur(5px);
 
     .image-container {
         height: fit-content;
@@ -26,6 +28,7 @@
         width: 100%;
         height: fit-content;
 
+        gap: 1rem;
         padding-top: 0.5rem;
 
         display: flex;
@@ -33,12 +36,46 @@
         justify-content: flex-start;
         align-items: flex-start;
 
-        .header {
-            margin-bottom: 0.5rem;
+        .header-container {
+            width: 100%;
+            height: fit-content;
+
+            gap: 0.5rem;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .header {
+                color: var(--H0);
+            }
+
+            .date {
+                font: var(--b3);
+                color: var(--H02);
+            }
         }
 
-        .date {
-            font: var(--b2);
+        .description {
+            font: var(--b1);
+        }
+
+        .skills {
+            width: 100%;
+            height: fit-content;
+
+            gap: 0.5rem;
+            margin: 1rem 0 0 -0.2rem;
+            padding: 0;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            flex-wrap: wrap;
+            list-style: none;
         }
     }
 }

@@ -16,9 +16,9 @@
         width: fit-content;
         height: fit-content;
 
-        gap: var(--gap-05);
+        gap: 0.5rem;
         border-radius: 5rem;
-        padding: var(--gap-05);
+        padding: 0.4rem;
 
         display: flex;
         flex-direction: row;
@@ -28,27 +28,30 @@
         list-style: none;
         user-select: none;
 
-        background-color:  rgb(var(--B01), 0.45);
-        border: 1px solid rgb(var(--B01));
+        background-color:  rgb(var(--R01), 0.45);
+        border: 1px solid rgb(var(--R01));
         backdrop-filter: blur(10px);
 
         .page {
-            cursor: pointer;
+            font: var(--b2);
             border-radius: 5rem;
             padding: var(--gap-05) var(--gap-10);
+            
+            cursor: pointer;
+            
             transition: var(--standart-transition);
 
             &.active {
                 color: var(--white);
-                background-color: rgb(var(--B03), 0.4);
+                background-color: rgb(var(--R03), 0.4);
 
                 &:hover {
-                    background-color: rgb(var(--B03), 0.5);
+                    background-color: rgb(var(--R03), 0.5);
                 }
             }
 
             &:hover {
-                background-color: rgb(var(--B03), 0.2);
+                background-color: rgb(var(--R03), 0.2);
             }
         }
     }
